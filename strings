@@ -1,0 +1,28 @@
+def hello(person):
+      print("'Hello, {}'".format(person))
+hello("Taylor")
+
+def quotable(name, quote):
+    print("{} said, \"{}\"".format(name, quote))
+
+quotable("Taylor", "Let's boogey.")
+
+def jedi_name(first_name, last_name):
+  first_three = last_name[0:3]
+  last_two = first_name[0:2]
+  master_name = first_three + last_two.lower()
+  print("Greetings, Master " + master_name)
+  
+
+jedi_name("Taylor", "Astiz")
+
+def poem_format(poem):
+  poem_lines = str.split(poem,".")
+  line_one = poem_lines[0] + ".\n"
+  line_two = poem_lines[1] + ".\n"
+  line_three = poem_lines[2] + ".\n"
+  line_four = poem_lines[3] + ".\n"
+  print(line_one + line_two + line_three + line_four)
+
+poem_format("Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Complex is better than complicated.")
+
