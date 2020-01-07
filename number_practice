@@ -1,0 +1,34 @@
+# takes a value in degrees celsius and converts to the unused measurement of the Romer scale
+def romer_scale(number):
+  romer_temp = int(number) * 60/100
+  print("{} degrees Celsius is {} on the Romer scale.".format(number, romer_temp))
+
+romer_scale(7)
+romer_scale(58)
+
+# checks if a particular pixel size in millimeters would even split about a particular wall size in millimeters
+def is_divisible(wall_size, pixel_size):
+  return True if wall_size % pixel_size == 0 else False
+
+is_divisible(1000, 10)
+is_divisible(967,4)
+
+# takes the beginign number of red and blue marbles as well as the number of blue and red marbles that have been
+# pulled out to calculate the probability of the next marble being blue
+def guess_blue(blue_start, red_start, blue_out, red_out):
+  intial_marbles = blue_start + red_start
+  current_marbles = intial_marbles - blue_out - red_out
+  blue_remain = blue_start - blue_out
+  odds = float(blue_remain/current_marbles)
+  return odds
+
+guess_blue(10,10,9,9)
+
+# takes the dimensions of a warehouse storage space in feet and calculates the number of pizza crates that can be stored
+def box_capacity(length, width, height):
+  warehouse_size = (length * 12) * (width * 12) * (height * 12)
+  crate_size = 16 *16 * 16
+  crate_count = warehouse_size/crate_size
+  print("Your warehouse can hold {} crates.".format(int(crate_count)))
+
+box_capacity(32,64,16)
