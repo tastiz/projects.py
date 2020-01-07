@@ -1,0 +1,12 @@
+def longest_word(longest_word):
+  length_list = []
+  for words in longest_word:
+    length_list.append(len(longest_word[0]))
+    length_list.append(len(longest_word[1]))
+    length_list.append(len(longest_word[2]))
+    length_list.append(len(longest_word[3]))
+    length_list.append(len(longest_word[4]))
+  return max(length_list)
+    
+
+longest_word(['simple', 'is', 'better', 'than', 'complex'])_
