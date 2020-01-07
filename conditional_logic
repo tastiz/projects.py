@@ -1,0 +1,46 @@
+#takes a weather conditon and probility of rain and returns True if an umbrella is needed.
+def take_umbrella(weather, rain_chance):
+  try:
+    if weather == "sunny" and rain_chance > 0.5:
+      return False
+    elif weather == "cloudy" and rain_chance < .2:
+      return False
+    else:
+       return True
+  except: TypeError
+
+take_umbrella("cloudy", .1)
+
+#takes the known texture of a marble in a game and determines the odds for a particular color of marbles
+def color_probability(color, texture):
+  red_smooth = 1
+  red_bumpy = 4
+  yellow_bumpy = 2
+  yellow_smooth = 1
+  green_bumpy = 1
+  green_smooth = 1
+  total_marbles = red_smooth + red_bumpy + yellow_bumpy + yellow_smooth + green_bumpy + green_smooth
+  total_smooth = red_smooth + yellow_smooth + green_smooth
+  total_bumpy = red_bumpy + yellow_bumpy + green_bumpy
+  if texture == "smooth":
+    if color == "red":
+      odds = float(red_smooth / total_marbles)
+      return odds
+    elif color == "yellow":
+      odds = float(yellow_smooth / total_marbles)
+      return odds
+    else:
+      odds = float(green_smooth / total_marbles)
+      return odds
+  else:
+    if color == "red":
+      odds = float(red_bumpy / total_marbles)
+      return odds
+    elif color == "yellow":
+      odds = float(yellow_bumpy / total_marbles)
+      return odds
+    else:
+      odds = float(green_bumpy / total_marbles)
+      return odds
+  
+color_probability("red", "bumpy")
