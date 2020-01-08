@@ -9,4 +9,26 @@ def longest_word(longest_word):
   return max(length_list)
     
 
-longest_word(['simple', 'is', 'better', 'than', 'complex'])_
+longest_word(['simple', 'is', 'better', 'than', 'complex'])
+
+def calculate_grade(grades):
+  grade = float(sum(grades)/len(grades))
+  if float(grade) >=.9:
+      return "A"
+  elif float(grade) >= .8:
+      return "B"
+  elif float(grade) >= .7:
+      return "C"
+  elif float(grade) >= .6:
+      return "D"
+  else:
+      return "F"
+    
+  
+
+
+
+calculate_grade([0, 0, 99])
+calculate_grade([92, 94, 99])
+calculate_grade([50, 60, 70, 80, 90])
+
