@@ -32,3 +32,14 @@ calculate_grade([0, 0, 99])
 calculate_grade([92, 94, 99])
 calculate_grade([50, 60, 70, 80, 90])
 
+def process_data(data):
+  new_list = []
+  for data_point in data:
+    num_one = data_point[0]
+    num_two = data_point[1]
+    new_num = num_one - num_two
+    new_list.append(new_num)
+  return new_list 
+
+
+process_data([[2, 5], [3, 4], [8, 7]])
