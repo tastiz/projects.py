@@ -1,10 +1,11 @@
 def quotable(name = input("What is your name? "), quote = input("What do you like to say? ")):
     print("{} said, \"{}\".format(name, quote)")
 quotable()
+
 def jedi_name(first_name = input("What is your first name?"), last_name = input("What is your last name?")):
     first_three = last_name[0:2]
   last_two = first_name[0:1]
     master_name = first_three + last_two
       print("Hello, Master {}".format(mastername))
 
- #jedi_name() 
+ jedi_name() 
